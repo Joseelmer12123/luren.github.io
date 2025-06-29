@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clínica Señor de Luren - Ica, Perú</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="img/logo_clinica.jpg" type="image/png" />
+</head>
+<body>
+
+  <!-- Header superior -->
+  <header>
+    <section class="top-bar">
+      <address>
+        <span>📞 +51 956 123 456</span>
+        <span>✉️ contacto@clinicasenordeluren.pe</span>
+      </address>
+    </section>
+
+    <!-- Encabezado principal -->
+    <section class="main-header">
+      <figure>
+        <img src="img/logo.jpg" alt="Logo" width="50" height="50">
+        <figcaption><h1>CLÍNICA LUREN</h1></figcaption>
+      </figure>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#reserva-cita">Citas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero-banner">
+      <header>
+        <h2>Bienvenido a Clínica Señor de Luren</h2>
+        <p>Soluciones Médicas de Confianza en Ica</p>
+      </header>
+      <nav>
+        <a href="#services" class="btn-primary">Ver Servicios</a>
+        <a href="#reserva-cita" class="btn-secondary">Reservar Cita</a>
+      </nav>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="about" class="about-us">
+      <div class="content">
+        <img src="img/Nosotros.jpg" alt="Nosotros">
+        <div class="text">
+          <header>
+            <h2>Nosotros</h2>
+            <p class="subtitle">Comprometidos con tu salud y bienestar</p>
+          </header>
+          <p>Somos una clínica dedicada a brindar atención médica de calidad, con profesionales comprometidos y tecnología avanzada para garantizar tu bienestar.</p>
+          <p>Ofrecemos servicios personalizados, cercanos y eficientes para toda la familia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="services" class="services">
+      <header><h2>Servicios Médicos</h2></header>
+      <ul>
+        <li>
+          <figure>
+            <img src="img/emergencias.jpg" alt="Emergencias 24/7">
+            <figcaption>
+              <h3>Emergencias 24/7</h3>
+              <p>Atención inmediata las 24 horas del día, los 7 días de la semana con personal capacitado y tecnología de punta.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/medicina.jpg" alt="Medicina General">
+            <figcaption>
+              <h3>Medicina General</h3>
+              <p>Diagnóstico y tratamiento de enfermedades comunes para pacientes de todas las edades.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/laboratorio.jpg" alt="Laboratorio Clínico">
+            <figcaption>
+              <h3>Laboratorio Clínico</h3>
+              <p>Exámenes de sangre, orina y otros análisis con resultados rápidos y confiables.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/farmacia.jpg" alt="Farmacia">
+            <figcaption>
+              <h3>Farmacia</h3>
+              <p>Medicamentos y productos médicos con atención personalizada y precios accesibles.</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/ecografias.jpg" alt="Ecografías y Rayos X">
+            <figcaption>
+              <h3>Ecografías y Rayos X</h3>
+              <p>Servicios de imagenología para apoyar diagnósticos médicos precisos.</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Reserva de cita -->
+<section class="reserva-cita" id="reserva-cita">
+  <header>
+    <h2>Reserva tu Cita</h2>
+    <p>Completa el formulario para agendar una consulta con nosotros.</p>
+  </header>
+
+  <form class="form-reserva">
+    <fieldset>
+      <legend>Información Personal</legend>
+      <label for="nombre">Nombre Completo</label>
+      <input type="text" name="nombre" id="nombre" required>
+      <label for="correo">Correo Electrónico</label>
+      <input type="email" name="correo" id="correo" required>
+      <label for="telefono">Teléfono</label>
+      <input type="tel" name="telefono" id="telefono">
+    </fieldset>
+
+    <fieldset>
+      <legend>Detalles de la Cita</legend>
+      <label for="fecha">Fecha</label>
+      <input type="date" name="fecha" id="fecha" required>
+      <label for="hora">Hora</label>
+      <input type="time" name="hora" id="hora" required>
+      <label for="motivo">Motivo</label>
+      <textarea name="motivo" id="motivo" rows="4" placeholder="Describe brevemente el motivo de la cita..."></textarea>
+    </fieldset>
+    <section style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+    <button type="submit" class="btn-cita">Reservar Cita</button>
+    <button type="button" id="ver-citas-btn" class="btn-cita">Ver Citas Registradas</button>
+    </section>
+    
+  </form>
+
+  <!-- Botón de ver citas -->
+  
+  <!-- Tabla de citas -->
+  <section id="seccion-citas" style="margin-top: 2rem; display: none;">
+    <h3>Citas Registradas</h3>
+    <table border="1" id="tabla-citas" style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Motivo</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</section>
+</section>
+
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+      <header>
+        <h2>Contáctanos</h2>
+        <p>Estamos aquí para ayudarte. Escríbenos y te responderemos lo antes posible.</p>
+      </header>
+
+      <section class="contenido-contacto">
+        <form class="formulario-contacto">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+          <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <section class="info-contacto">
+          <p><strong>📍 Dirección:</strong> Av. Principal 123, Ica, Perú</p>
+          <p><strong>📞 Teléfono:</strong> +51 956 123 456</p>
+          <p><strong>✉️ Correo:</strong> contacto@clinicasenordeluren.pe</p>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Clínica Señor de Luren, Ica - Perú. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
